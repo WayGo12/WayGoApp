@@ -29,7 +29,7 @@ class ProfileFragment : Fragment() {
     }
 
     private val viewModel by viewModels<ProfileViewModel> {
-        VMFactory.getInstance(requireActivity())
+        VMFactory.getInstance(requireContext(), requireActivity().application)
     }
 
     private var _binding: FragmentProfileBinding? = null

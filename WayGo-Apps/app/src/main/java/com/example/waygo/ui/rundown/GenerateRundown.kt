@@ -1,33 +1,21 @@
 package com.example.waygo.ui.rundown
 
-import android.content.Intent
 import android.os.Bundle
-import android.text.Editable
-import android.text.TextWatcher
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.activity.viewModels
-import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.example.waygo.databinding.ActivityCustomRundownBinding
 import com.example.waygo.databinding.ActivityGenerateRundownBinding
-import com.example.waygo.databinding.ActivityRegisterBinding
 import com.example.waygo.helper.Result
 import com.example.waygo.helper.VMFactory
-import com.example.waygo.ui.customRundown.CustomRundown
-import com.example.waygo.ui.customView.ButtonRegister
-import com.example.waygo.ui.login.LoginActivity
-import com.example.waygo.ui.register.RegisterViewModel
-import com.example.waygo.ui.welcome.WelcomeActivity
 
 class GenerateRundown : Fragment() {
 
     private val viewModel by viewModels<GenerateRundownVM> {
-        VMFactory.getInstance(requireContext())
+        VMFactory.getInstance(requireContext(), requireActivity().application)
     }
     private lateinit var binding: ActivityGenerateRundownBinding
 

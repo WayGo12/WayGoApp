@@ -30,7 +30,7 @@ class HomeFragment : Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel by viewModels<HomeViewModel> {
-        VMFactory.getInstance(requireActivity())
+        VMFactory.getInstance(requireContext(), requireActivity().application)
     }
 
     private val popularAdapter = VacationAdapter()

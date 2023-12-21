@@ -19,7 +19,7 @@ import com.example.waygo.helper.Result
 class WelcomeActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<WelcomeViewModel> {
-        VMFactory.getInstance(this)
+        VMFactory.getInstance(this, application)
     }
 
     private lateinit var binding: ActivityWelcomeBinding

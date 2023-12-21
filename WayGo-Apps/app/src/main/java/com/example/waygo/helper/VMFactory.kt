@@ -1,5 +1,6 @@
 package com.example.waygo.helper
 
+import android.app.Application
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
@@ -15,7 +16,7 @@ import com.example.waygo.ui.splash.SplashVm
 import com.example.waygo.ui.customRundown.CustomRundownVM
 import com.example.waygo.ui.rundown.GenerateRundownVM
 
-class VMFactory  private constructor(private val repository: Repository) :
+class VMFactory(private val repository: Repository, private val application: Application) :
     ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -36,7 +37,7 @@ class VMFactory  private constructor(private val repository: Repository) :
                 HomeViewModel(repository) as T
             }
             modelClass.isAssignableFrom(DetailViewModel::class.java) -> {
-                DetailViewModel(repository) as T
+                DetailViewModel(repository, application ) as T
             }
             modelClass.isAssignableFrom(ProfileViewModel::class.java) -> {
                 ProfileViewModel(repository) as T
@@ -53,12 +54,12 @@ class VMFactory  private constructor(private val repository: Repository) :
     companion object {
         @Volatile
         private var instance: VMFactory? = null
-        fun getInstance(context: Context): VMFactory =
+        fun getInstance(context: Context, application: Application): VMFactory =
             instance ?: synchronized(this) {
-                instance ?: VMFactory(Injection.provideRepository(context))
+                instance ?: VMFactory(Injection.provideRepository(context), application)
             }.also { instance = it }
 
-        fun clearInstance(){
+        fun clearInstance() {
             Repository.clearInstance()
             instance = null
         }

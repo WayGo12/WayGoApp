@@ -12,6 +12,12 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
+        android:id="@+id/navigation_wishlist"
+        android:name="com.example.waygo.ui.wishlist.WishlistFragment"
+        android:label="@string/wishlist"
+        tools:layout="@layout/fragment_wishlist" />
+
+    <fragment
         android:id="@+id/navigation_rundown"
         android:name="com.example.waygo.ui.customRundown.CustomRundown"
         android:label="@string/title_dashboard"

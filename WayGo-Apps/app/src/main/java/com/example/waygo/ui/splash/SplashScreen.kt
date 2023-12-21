@@ -13,7 +13,7 @@ import com.example.waygo.ui.login.LoginActivity
 
 class SplashScreen : AppCompatActivity() {
     private val viewModel by viewModels<SplashVm> {
-        VMFactory.getInstance(this)
+        VMFactory.getInstance(this, application)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {

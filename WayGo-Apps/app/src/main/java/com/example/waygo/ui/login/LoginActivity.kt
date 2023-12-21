@@ -20,7 +20,7 @@ import com.example.waygo.helper.Result
 class LoginActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<LoginViewModel> {
-        VMFactory.getInstance(this)
+        VMFactory.getInstance(this, application)
     }
     private lateinit var buttonLogin: ButtonLogin
     private lateinit var binding: ActivityLoginBinding
