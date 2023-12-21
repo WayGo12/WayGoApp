@@ -10,13 +10,13 @@ import com.example.waygo.ui.profile.ProfileViewModel
 import com.example.waygo.ui.register.RegisterViewModel
 import com.example.waygo.ui.welcome.WelcomeViewModel
 import com.example.waygo.Injection
-import com.example.waygo.data.Repository
+import com.example.waygo.data.Storage
 import com.example.waygo.ui.detail.DetailViewModel
 import com.example.waygo.ui.splash.SplashVm
 import com.example.waygo.ui.customRundown.CustomRundownVM
 import com.example.waygo.ui.rundown.GenerateRundownVM
 
-class VMFactory(private val repository: Repository, private val application: Application) :
+class VMFactory(private val repository: Storage, private val application: Application) :
     ViewModelProvider.NewInstanceFactory() {
     @Suppress("UNCHECKED_CAST")
     override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -60,7 +60,7 @@ class VMFactory(private val repository: Repository, private val application: App
             }.also { instance = it }
 
         fun clearInstance() {
-            Repository.clearInstance()
+            Storage.clearInstance()
             instance = null
         }
     }
