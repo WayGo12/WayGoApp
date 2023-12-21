@@ -49,5 +49,5 @@ Contributions to the WayGoApp repository are welcome. If you would like to contr
 
 ## Contact
 
-For any inquiries or support, please contact the WayGo development team at [waygo-devs@example.com](mailto:appwaygo@gmail.com)
+For any inquiries or support, please contact the WayGo development team at [appwaygo@gmail.com](mailto:appwaygo@gmail.com)
 
