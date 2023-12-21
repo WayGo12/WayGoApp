@@ -10,23 +10,23 @@ WayGO-ML is a repository dedicated to developing machine learning applications f
 
 The repository is organized as follows:
 
-- **Dataset**: This directory contains the machine learning datasets used for training and evaluation.
-- **Flask**: Here, you can find Flask applications that utilize machine learning models, as well as materials for integrating machine learning, cloud computing, and mobile development.
-- **Notebook**: This directory contains Jupyter Notebook files with machine learning code and experiments.
-- **Model**: The machine learning models are stored in this directory.
-- **requirements.txt**: It lists the Flask requirements for running the applications.
+- **[Dataset](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/dataset)/**: This directory contains the machine learning datasets used for training and evaluation.
+- **[Flask](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/flask)**: Here, you can find Flask applications that utilize machine learning models, as well as materials for integrating machine learning, cloud computing, and mobile development.
+- **[Notebook](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/notebook)/**: This directory contains Jupyter Notebook files with machine learning code and experiments.
+- **[Model](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/model)/**: The machine learning models are stored in this directory.
+- **[requirements.txt](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/requirements.txt)**: It lists the Flask requirements for running the applications.
 
 ```
 WayGoApp/
 └── WayGo-ML/
-    ├── [dataset](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/dataset)/ 
-    ├── [notebooks](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/notebook)/
-    │   ├── [Capstone_Loop_Day.ipynb](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/notebook/Capstone_Loop_Day.ipynb) 
-    │   ├── [ML Collaborative Filterng](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/notebook/ML%20Collaborative%20Filtering.ipynb)
-    ├── [flask](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/flask)/ 
-    │   └── [flaskapp.py](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/flask/flaskapp.py)
-    ├── README.md # Documentation for the Machine Learning module
-    └── [requirements.txt](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/requirements.txt) # List of dependencies for the project
+    ├── dataset/ 
+    ├── notebook
+    │   ├── Capstone_Loop_Day.ipynb
+    │   ├── ML Collaborative Filtering
+    ├── Flask
+    │   └── flaskapp.py
+    ├── README.md 
+    └── requirements.txt
 ```
 
 ## Getting Started
