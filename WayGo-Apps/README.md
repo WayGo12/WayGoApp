@@ -1,30 +1,23 @@
-# WayGO-ML
+# WayGO-MD
 
-Repository for Machine Learning Waygo Apps
+Repository for Mobile Development Waygo Apps
 
 ## About
 
-WayGO-ML is a repository dedicated to developing machine learning applications for Waygo. It contains datasets, machine learning models, notebooks, and Flask applications.
+WayGO-MD is a repository dedicated to developing mobile applications for Waygo.
 
 ## Repository Structure
 
-The repository is organized as follows:
-
-- **Dataset**: This directory contains the machine learning datasets used for training and evaluation.
-- **Flask**: Here, you can find Flask applications that utilize machine learning models, as well as materials for integrating machine learning, cloud computing, and mobile development.
-- **Notebook**: This directory contains Jupyter Notebook files with machine learning code and experiments.
-- **Model**: The machine learning models are stored in this directory.
-- **requirements.txt**: It lists the Flask requirements for running the applications.
-
 ## Getting Started
 
-To get started with the WayGo-ML project, follow these steps:
+To get started with the WayGo-MD project, follow these steps:
+
 
 1. Clone the repository: `git clone https://github.com/WayGo12/WayGoApp.git`
-2. Navigate to the `WayGo-ML` directory: `cd WayGo-ML`
-3. Install the required dependencies: `pip install -r requirements.txt`
-4. Explore the different directories and files to understand the structure of the project.
-5. Refer to the documentation and README files within each directory for more specific instructions on running the applications and experiments.
+2. Navigate to the `WayGo-MD/Android` directory: `cd WayGo-MD/Android`
+3. Explore the different directories and files to understand the structure of the Android project.
+4. Refer to the documentation and README files within each Android-related directory for more specific instructions on running the applications and experiments.
+
 
 ## Contributions
 
@@ -43,9 +36,9 @@ Contributions to WayGO-ML are welcome! If you would like to contribute, please f
 
 ## Contact
 
-If you have any questions or suggestions regarding WayGO-ML, please feel free to contact us.
+If you have any questions or suggestions regarding WayGO-MD, please feel free to contact us.
 
 ## Credits
 
-WayGO-ML is developed and maintained by [WayGo12](https://github.com/WayGo12).
+WayGO-MD is developed and maintained by [WayGo12](https://github.com/WayGo12).
 
