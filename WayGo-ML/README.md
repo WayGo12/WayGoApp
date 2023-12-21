@@ -16,6 +16,17 @@ The repository is organized as follows:
 - **Model**: The machine learning models are stored in this directory.
 - **requirements.txt**: It lists the Flask requirements for running the applications.
 
+WayGoApp/
+└── WayGo-ML/
+    ├── [dataset](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/dataset)/ 
+    ├── [notebooks](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/notebook)/
+    │   ├── [Capstone_Loop_Day.ipynb](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/notebook/Capstone_Loop_Day.ipynb) 
+    │   ├── [ML Collaborative Filterng](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/notebook/ML%20Collaborative%20Filtering.ipynb)
+    ├── [flask](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/flask)/ 
+    │   └── [flaskapp.py](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/flask/flaskapp.py)
+    ├── README.md # Documentation for the Machine Learning module
+    └── [requirements.txt](https://github.com/WayGo12/WayGoApp/blob/main/WayGo-ML/requirements.txt) # List of dependencies for the project
+
 ## Getting Started
 
 To get started with the WayGo-ML project, follow these steps:
