@@ -3,6 +3,7 @@ package com.example.waygo.data.response
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.parcelize.Parcelize
+import kotlinx.parcelize.RawValue
 
 @Parcelize
 data class LoginResponse(
@@ -191,3 +192,63 @@ data class TouristSpot(
     @field:SerializedName("updatedAt")
     val updatedAt: String
 ) : Parcelable
+
+
+
+@Parcelize
+data class RundownResponse(
+
+    @field:SerializedName("status")
+    val status: String
+
+) : Parcelable
+
+
+
+
+@Parcelize
+data class ResultRundownResponse(
+
+    @field:SerializedName("rundown")
+    val rundown: @RawValue List<RundownItem>,
+
+    @field:SerializedName("recommendations")
+    val recommendations: Recommendations,
+
+    @field:SerializedName("status")
+    val status: String
+) : Parcelable
+
+@Parcelize
+data class Recommendations(
+
+    @field:SerializedName("Kategori")
+    val kategori: List<String>,
+
+    @field:SerializedName("Nama Tempat")
+    val namaTempat: List<String>,
+
+    @field:SerializedName("Latitude")
+    val latitude: List<String>,
+
+    @field:SerializedName("Longitude")
+    val longitude: List<String>
+) : Parcelable
+
+@Parcelize
+data class RundownItem(
+
+    @field:SerializedName("Jarak Tempat")
+    val jarakTempat: String,
+
+    @field:SerializedName("Kategori")
+    val kategori: String,
+
+    @field:SerializedName("Jam Rundown")
+    val jamRundown: String,
+
+    @field:SerializedName("Nama Tempat")
+    val namaTempat: String
+) : Parcelable
+
+

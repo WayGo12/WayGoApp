@@ -1,4 +1,4 @@
-package com.example.waygo.ui.rundown
+package com.example.waygo.ui.customRundown
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -7,6 +7,8 @@ import com.example.waygo.data.Repository
 import kotlinx.coroutines.flow.first
 
 class CustomRundownVM(private val repository: Repository) : ViewModel() {
+
+    fun getAllRundown() = repository.getAllRundown().cachedIn(viewModelScope)
 
     suspend fun getSession() {
         repository.getSession().first()

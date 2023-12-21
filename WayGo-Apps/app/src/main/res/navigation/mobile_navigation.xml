@@ -13,7 +13,7 @@
 
     <fragment
         android:id="@+id/navigation_rundown"
-        android:name="com.example.waygo.ui.rundown.CustomRundown"
+        android:name="com.example.waygo.ui.customRundown.CustomRundown"
         android:label="@string/title_dashboard"
         tools:layout="@layout/activity_custom_rundown" />
 

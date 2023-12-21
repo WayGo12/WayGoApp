@@ -10,7 +10,7 @@ private val timeStamp: String = SimpleDateFormat(FILENAME_FORMAT, Locale.US).for
 
 fun createCustomTempFile(context: Context): File {
     val filesDir = context.externalCacheDir
-    return File.createTempFile("Laperin-${timeStamp}", ".jpg", filesDir)
+    return File.createTempFile("Waygo-${timeStamp}", ".jpg", filesDir)
 }
 
 fun meterToKilometer(meter: Double): String {

@@ -12,7 +12,7 @@ import com.example.waygo.Injection
 import com.example.waygo.data.Repository
 import com.example.waygo.ui.detail.DetailViewModel
 import com.example.waygo.ui.splash.SplashVm
-import com.example.waygo.ui.rundown.CustomRundownVM
+import com.example.waygo.ui.customRundown.CustomRundownVM
 import com.example.waygo.ui.rundown.GenerateRundownVM
 
 class VMFactory  private constructor(private val repository: Repository) :

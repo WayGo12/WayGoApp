@@ -1,7 +1,6 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
-    //id("com.google.devtools.ksp")
     id("kotlin-parcelize")
 }
 
@@ -29,6 +28,7 @@ android {
         }
         debug {
             buildConfigField("String", "BASE_URL", "\"https://waygo-database.et.r.appspot.com/\"")
+            buildConfigField("String", "ML_URL", "\"https://machine-learn-api-7zwskonanq-et.a.run.app/\"")
 
         }
     }

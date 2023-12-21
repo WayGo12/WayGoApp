@@ -41,7 +41,7 @@
         android:layout_height="0dp"
         android:layout_marginTop="-50dp"
         android:background="@drawable/bg_welcome"
-        android:backgroundTint="@color/blue_light"
+        android:backgroundTint="@color/primary"
         android:padding="24dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
