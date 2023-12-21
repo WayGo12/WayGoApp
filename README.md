@@ -1,2 +1,2 @@
 # WayGoApp
-Repository For WayGo APP Mobile Devs
+Repository For WayGo APPs
