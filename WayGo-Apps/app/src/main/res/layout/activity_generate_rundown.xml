@@ -7,159 +7,77 @@
     android:background="@color/white"
     tools:context=".ui.rundown.GenerateRundown">
 
+
     <TextView
-        android:id="@+id/tv_generate"
+        android:id="@+id/tvRundown"
+        style="@style/bold"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:text="Generate Rundown Berdasarkan Pilihan Mu"
+        android:layout_marginHorizontal="16dp"
+        android:layout_marginTop="40dp"
+        android:text=" Generate Rundown"
+        android:textSize="30sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.113"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_checkbox1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="kapan kamu mau pergi"
+    <com.example.waygo.ui.customView.EditText
+        android:id="@+id/edUserid"
+        style="@style/medium"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Userid"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.059"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_generate" />
+        app:layout_constraintTop_toBottomOf="@+id/tvRundown" />
 
-    <CheckBox
-        android:id="@+id/checkbox_pagi"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Pagi"
-        app:checkedState="indeterminate"
+
+    <com.example.waygo.ui.customView.EditText
+        android:id="@+id/edRegion"
+        style="@style/medium"
+        android:layout_width="0dp"
+        android:layout_height="52dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="16dp"
+        android:hint="Region"
+        android:inputType="textEmailAddress"
+        android:padding="10dp"
+        android:textSize="13sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_checkbox1"
-        app:cardCornerRadius="10dp"
-        android:layout_margin="8dp"/>
-
-    <CheckBox
-        android:id="@+id/checkbox_siang"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:text="Siang"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_pagi" />
-
-    <CheckBox
-        android:id="@+id/checkbox_malam"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:text="Malam"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_siang" />
-
-
-    <TextView
-        android:id="@+id/tv_checkbox2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="Kemana Aja Hari Ini"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_malam" />
-
-    <CheckBox
-        android:id="@+id/checkbox_hotel"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Hotel"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_checkbox2" />
-
-    <CheckBox
-        android:id="@+id/checkbox_wisata"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:text="Wisata"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_hotel" />
-
-    <CheckBox
-        android:id="@+id/checkbox_restoran"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:text="Restoran"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_wisata" />
-
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Dimana Lokasi Mu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.054"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_restoran" />
-
-    <CheckBox
-        android:id="@+id/checkbox_balibarat"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
-        android:text="Bali Barat"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <CheckBox
-        android:id="@+id/checkbox_baliselatan"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:text="Bali Selatan"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_balibarat" />
-
-    <CheckBox
-        android:id="@+id/checkbox_balitimur"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:text="Bali Timur"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_baliselatan" />
-
-    <CheckBox
-        android:id="@+id/checkbox_baliutara"
-        android:layout_width="380dp"
-        android:layout_height="wrap_content"
-        android:text="Bali Utara"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_balitimur" />
+        app:layout_constraintTop_toBottomOf="@+id/edUserid" />
 
     <Button
+        android:id="@+id/btnRundown"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Generate"
-        android:background="@drawable/bg_layout"
+        android:text="@string/rundown"
+        android:width="200dp"
+        android:height="50dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkbox_baliutara"
-        app:layout_constraintVertical_bias="0.781" />
+        app:layout_constraintTop_toBottomOf="@+id/edRegion"
+        app:layout_constraintVertical_bias="0.845" />
 
+    <ProgressBar
+        android:id="@+id/progressBarRundown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:visibility="invisible"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

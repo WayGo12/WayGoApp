@@ -10,14 +10,14 @@
     <View
         android:id="@+id/view"
         android:layout_width="400dp"
-        android:layout_height="600dp"
+        android:layout_height="670dp"
         android:background="@drawable/bg_layout"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.454"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.61" />
+        app:layout_constraintVertical_bias="0.491" />
 
     <TextView
         android:id="@+id/tv_profile"
@@ -30,8 +30,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.036" />
-
+        app:layout_constraintVertical_bias="0.076" />
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:id="@+id/img_user"
@@ -43,7 +42,7 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/view"
-        app:layout_constraintVertical_bias="0.056" />
+        app:layout_constraintVertical_bias="0.121" />
 
     <TextView
         android:id="@+id/tv_detail_user"

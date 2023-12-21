@@ -44,10 +44,11 @@ interface ApiService {
         @Query("page") page: Int,
         @Query("pageSize") size: Int
     ): TouristResponse
-//
+
     @GET("touristspot/detail/{id}")
     suspend fun getDetailTourist(
         @Path("id") id: String
     ): Response<DetailTouristResponse>
+
 
 }

@@ -10,8 +10,8 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.fragment.app.viewModels
+import com.example.waygo.data.pref.UserPrefs
 import com.example.waygo.ui.login.LoginActivity
-import com.example.waygo.data.pref.UserPreference
 import com.example.waygo.data.pref.dataStore
 import com.example.waygo.data.response.User
 import com.example.waygo.databinding.FragmentProfileBinding
@@ -23,6 +23,10 @@ import kotlinx.coroutines.runBlocking
 import org.json.JSONException
 
 class ProfileFragment : Fragment() {
+
+    companion object {
+        private const val TAG = "ProfileFragment"
+    }
 
     private val viewModel by viewModels<ProfileViewModel> {
         VMFactory.getInstance(requireActivity())
@@ -48,31 +52,21 @@ class ProfileFragment : Fragment() {
     }
 
 
-//    private fun getData() {
-//        val pref = UserPreference.getInstance(requireActivity().dataStore)
-//        val user = runBlocking { pref.getSession().first() }
-//        val token = user.accessToken
-//
-//        try {
-//            val id = Token.getId(token)
-//            Log.i(TAG, "token: $token")
-//            Log.i(TAG, "id: $id")
-//            setupUser(id)
-//        } catch (e: JSONException) {
-//            // Handle the JSONException here, log an error, show a message, or take appropriate action
-//            Log.e(TAG, "JSONException: ${e.message}")
-//            // You might want to provide a default value or take another appropriate action
-//        }
-//    }
-
     private fun getData() {
-        val pref = UserPreference.getInstance(requireActivity().dataStore)
+        val pref = UserPrefs.getInstance(requireActivity().dataStore)
         val user = runBlocking { pref.getSession().first() }
         val token = user.accessToken
-        val id = Token.getId(token)
-        Log.i(TAG, "token: $token")
-        Log.i(TAG, "id: $id")
-        setupUser(id)
+
+        try {
+            val id = Token.getId(token)
+            Log.i(TAG, "token: $token")
+            Log.i(TAG, "id: $id")
+            setupUser(id)
+        } catch (e: JSONException) {
+            // Handle the JSONException here, log an error, show a message, or take appropriate action
+            Log.e(TAG, "JSONException: ${e.message}")
+            // You might want to provide a default value or take another appropriate action
+        }
     }
 
     private  fun setupUser(id :String?)  {
@@ -109,24 +103,45 @@ class ProfileFragment : Fragment() {
 
     }
 
+//    private fun Logout() {
+//        val alertDialogBuilder = AlertDialog.Builder(requireContext())
+//        alertDialogBuilder.setTitle("Konfirmasi Keluar")
+//        alertDialogBuilder.setMessage("Anda yakin ingin keluar?")
+//        alertDialogBuilder.setPositiveButton("Ya") { _, _ ->
+//            viewModel.logout()
+//
+//            val intent = Intent(requireContext(), LoginActivity::class.java)
+//            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+//            startActivity(intent)
+//            requireActivity().finish()
+//        }
+//        alertDialogBuilder.setNegativeButton("Tidak") { dialog, _ ->
+//            dialog.dismiss()
+//        }
+//        alertDialogBuilder.create().show()
+//    }
+
+
     private fun Logout() {
-        val alertDialogBuilder = AlertDialog.Builder(requireContext())
-        alertDialogBuilder.setTitle("Konfirmasi Keluar")
-        alertDialogBuilder.setMessage("Anda yakin ingin keluar?")
-        alertDialogBuilder.setPositiveButton("Ya") { _, _ ->
-            viewModel.logout()
+        val dialogBuilder = AlertDialog.Builder(requireContext())
+        with(dialogBuilder) {
+            setTitle("Konfirmasi Keluar")
+            setMessage("Anda yakin ingin keluar?")
+            setPositiveButton("Ya") { _, _ ->
+                viewModel.logout()
 
-            val intent = Intent(requireContext(), LoginActivity::class.java)
-            intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-            startActivity(intent)
-            requireActivity().finish()
+                val loginIntent = Intent(requireContext(), LoginActivity::class.java).apply {
+                    flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
+                }
+                startActivity(loginIntent)
+                requireActivity().finish()
+            }
+            setNegativeButton("Tidak") { dialog, _ ->
+                dialog.dismiss()
+            }
+            create().show()
         }
-        alertDialogBuilder.setNegativeButton("Tidak") { dialog, _ ->
-            dialog.dismiss()
-        }
-        alertDialogBuilder.create().show()
     }
-
 
     private fun showLoading(isLoading: Boolean) {
         val binding = _binding
@@ -143,8 +158,5 @@ class ProfileFragment : Fragment() {
         super.onDestroyView()
         _binding = null
     }
-    companion object {
-        private const val TAG = "ProfileFragment"
-        const val ACTION_PROFILE_UPDATED = "ActionProfile"
-    }
+
 }

@@ -32,7 +32,6 @@ class WelcomeActivity : AppCompatActivity() {
         binding = ActivityWelcomeBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.btnNext.setOnClickListener { onClickNext() }
         binding.btnSkip.setOnClickListener { onClickSkip() }
 
         setupLayout()
@@ -68,9 +67,7 @@ class WelcomeActivity : AppCompatActivity() {
 
     private fun setupLayout() {
         layouts = intArrayOf(
-            R.layout.slide_1,
-            R.layout.slide_2,
-            R.layout.slide_3
+            R.layout.onboarding_screen,
         )
     }
 
@@ -88,10 +85,8 @@ class WelcomeActivity : AppCompatActivity() {
 
             override fun onPageSelected(position: Int) {
                 if (position == layouts.size - 1){
-                    binding.btnNext.text = getString(R.string.start)
                     binding.btnSkip.visibility = View.GONE
                 } else {
-                    binding.btnNext.text = getString(R.string.selanjutnya)
                     binding.btnSkip.visibility = View.VISIBLE
                 }
                 setDots(position)
@@ -109,16 +104,6 @@ class WelcomeActivity : AppCompatActivity() {
         finish()
     }
 
-    private fun onClickNext() {
-        val currentPage: Int = binding.viewPager.currentItem + 1
-
-        if (currentPage < layouts.size){
-            binding.viewPager.currentItem = currentPage
-        } else {
-            startActivity(Intent((this@WelcomeActivity), MainActivity::class.java))
-            finish()
-        }
-    }
 
     @Suppress("DEPRECATION")
     private fun setDots(page: Int) {

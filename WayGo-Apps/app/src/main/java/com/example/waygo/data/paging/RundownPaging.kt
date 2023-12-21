@@ -3,13 +3,15 @@ package com.example.waygo.data.paging
 import androidx.paging.PagingSource
 import androidx.paging.PagingState
 import com.example.waygo.data.response.AllTouristSpotsItem
+import com.example.waygo.data.response.RundownItem
 import com.example.waygo.data.retrofit.ApiService
+import com.example.waygo.data.retrofit.MlService
 
-class VacationPaging (private val apiService: ApiService) : PagingSource<Int, AllTouristSpotsItem>() {
-    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, AllTouristSpotsItem> {
+class RundownPaging  (private val mlService: MlService) : PagingSource<Int, RundownItem>() {
+    override suspend fun load(params: LoadParams<Int>): LoadResult<Int, RundownItem> {
         return try {
             val position = params.key ?: INITIAL_PAGE_INDEX
-            val response = apiService.getAllTourist(position, params.loadSize).allTouristSpots
+            val response = mlService.getRundown(position, params.loadSize).rundown
 
             LoadResult.Page(
                 data = response,
@@ -21,7 +23,7 @@ class VacationPaging (private val apiService: ApiService) : PagingSource<Int, Al
         }
     }
 
-    override fun getRefreshKey(state: PagingState<Int, AllTouristSpotsItem>): Int? {
+    override fun getRefreshKey(state: PagingState<Int, RundownItem>): Int? {
         return state.anchorPosition?.let { anchorPosition ->
             val anchorPage = state.closestPageToPosition(anchorPosition)
             anchorPage?.prevKey?.plus(1) ?: anchorPage?.nextKey?.minus(1)

@@ -24,15 +24,10 @@
         android:theme="@style/Theme.WayGo"
         tools:targetApi="31">
         <activity
-            android:name=".ui.rundown.ResultGenerateRundown"
-            android:exported="false"
-            android:label="@string/title_activity_result_generate_rundown"
-            android:theme="@style/Theme.WayGo" />
-        <activity
             android:name=".ui.rundown.GenerateRundown"
             android:exported="false" />
         <activity
-            android:name=".ui.rundown.CustomRundown"
+            android:name=".ui.customRundown.CustomRundown"
             android:exported="false" />
         <activity
             android:name=".ui.detail.DetailActivity"

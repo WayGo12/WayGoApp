@@ -79,7 +79,7 @@ class DetailActivity : AppCompatActivity() {
             tvTitle.text = data.name
             tvKategori.text = data.category
             tvIngredients.text = data.openingHours
-            tvDetailLokasi.text = data.locateUrl
+            tvDetailLokasi.text = data.location
         }
     }
 
