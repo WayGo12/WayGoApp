@@ -1,19 +1,16 @@
 package com.example.waygo.ui.rundown
 
 import androidx.lifecycle.ViewModel
-import com.example.waygo.data.Repository
-import com.example.waygo.data.retrofit.ApiService
-import kotlinx.coroutines.flow.first
-import retrofit2.Call
-import retrofit2.Response
+import com.example.waygo.data.Storage
 
-class GenerateRundownVM(private val repository: Repository) : ViewModel() {
+
+class GenerateRundownVM(private val storage: Storage) : ViewModel() {
 
 
     fun rundownUser(
         user_id: String,
         region: String,
 
-        ) = repository.generateRundownUser(user_id, region)
+        ) = storage.generateRundownUser(user_id, region)
 
 }

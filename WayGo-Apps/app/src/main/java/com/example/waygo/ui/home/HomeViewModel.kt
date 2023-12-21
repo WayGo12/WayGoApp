@@ -5,16 +5,15 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import androidx.paging.cachedIn
-import com.example.waygo.data.Repository
-
+import com.example.waygo.data.Storage
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.runBlocking
 
-class HomeViewModel(private val repository: Repository) : ViewModel() {
+class HomeViewModel(private val storage : Storage) : ViewModel() {
 
-    fun getAllTourist() = repository.getAllTourist().cachedIn(viewModelScope)
+    fun getAllTourist() = storage.getAllTourist().cachedIn(viewModelScope)
 
     suspend fun getSession() {
-        repository.getSession().first()
+        storage.getSession().first()
     }
 }

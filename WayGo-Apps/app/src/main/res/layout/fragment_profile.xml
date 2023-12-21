@@ -36,7 +36,7 @@
         android:id="@+id/img_user"
         android:layout_width="82dp"
         android:layout_height="84dp"
-        android:src="@drawable/avatar"
+        android:src="@drawable/profile"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"

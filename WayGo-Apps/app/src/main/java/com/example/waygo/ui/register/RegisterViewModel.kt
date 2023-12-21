@@ -4,16 +4,16 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.waygo.data.Repository
+import com.example.waygo.data.Storage
 import kotlinx.coroutines.launch
 
-class RegisterViewModel(private val repository: Repository) : ViewModel() {
+class RegisterViewModel(private val storage: Storage) : ViewModel() {
 
     fun registerUser(
         username: String,
         email: String,
         password: String,
 
-    ) = repository.registerUser(username, email, password)
+    ) = storage.registerUser(username, email, password)
 
 }
