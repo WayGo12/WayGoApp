@@ -21,15 +21,16 @@
     <string name="title_notifications">Notifications</string>
     <string name="title_profile">Profil</string>
     <string name="title_activity_result_generate_rundown">ResultGenerateRundown</string>
-    <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
     <string name="previous">Previous</string>
     <string name="rundown">Rundown</string>
-
-    <string name="desc">
-  Waygo adalah aplikasi bagi mereka yang sering
+    <string name="desc"> Waygo merupakan aplikasi generate rundown berdasarkan inputan user, seperti tempat yang akan mereka tuju atau lainya. WayGo memberikan solusi bagi mereka yang suka berpergian namun tidak mengetahui apasaja tempat wisata di lokasi tersebut.
     </string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="wishlist">Wishlist\n</string>
+    <string name="wishlist_removed">Wishlist Removed</string>
+    <string name="wishlist_added">Added To Wishlist</string>
 
 </resources>

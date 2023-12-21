@@ -1,6 +1,5 @@
 package com.example.waygo.ui.customRundown
 
-import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -10,19 +9,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.waygo.adapter.LoadingStateAdapter
 import com.example.waygo.adapter.RundownAdapter
-import com.example.waygo.adapter.VacationAdapter
-import com.example.waygo.data.pref.UserPrefs
-import com.example.waygo.data.pref.dataStore
-import com.example.waygo.data.response.AllTouristSpotsItem
-import com.example.waygo.data.response.RundownItem
 import com.example.waygo.databinding.ActivityCustomRundownBinding
-import com.example.waygo.databinding.FragmentHomeBinding
-import com.example.waygo.helper.Token
 import com.example.waygo.helper.VMFactory
-import com.example.waygo.ui.detail.DetailActivity
-import com.example.waygo.ui.home.HomeViewModel
-import kotlinx.coroutines.flow.first
-import kotlinx.coroutines.runBlocking
 import java.lang.ref.WeakReference
 import java.util.Timer
 import kotlin.properties.ReadWriteProperty
@@ -34,7 +22,7 @@ class CustomRundown :  Fragment() {
     private val binding get() = _binding!!
 
     private val viewModel by viewModels<CustomRundownVM> {
-        VMFactory.getInstance(requireActivity())
+        VMFactory.getInstance(requireContext(), requireActivity().application)
     }
 
     private val rundownAdapter = RundownAdapter()

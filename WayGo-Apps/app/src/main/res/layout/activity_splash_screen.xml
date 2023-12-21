@@ -7,4 +7,14 @@
     android:layout_height="match_parent"
     tools:context=".ui.splash.SplashScreen">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+
+  <ImageView
+      android:layout_width="190dp"
+      android:layout_height="190dp"
+      android:background="@drawable/waygo"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

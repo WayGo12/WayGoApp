@@ -20,7 +20,7 @@ import com.example.waygo.ui.customView.ButtonRegister
 class RegisterActivity : AppCompatActivity() {
 
     private val viewModel by viewModels<RegisterViewModel> {
-        VMFactory.getInstance(this)
+        VMFactory.getInstance(this, application)
     }
     private lateinit var buttonRegister: ButtonRegister
     private lateinit var binding: ActivityRegisterBinding

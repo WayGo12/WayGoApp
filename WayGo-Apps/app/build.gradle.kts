@@ -2,6 +2,8 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("kotlin-parcelize")
+    id("com.google.devtools.ksp")
+
 }
 
 android {
@@ -67,7 +69,6 @@ dependencies {
     //Room
     implementation("androidx.room:room-paging:2.6.1")
     implementation("androidx.room:room-ktx:2.6.1")
-    implementation("androidx.room:room-runtime:2.6.1")
     implementation("androidx.navigation:navigation-fragment-ktx:2.7.5")
     implementation("androidx.navigation:navigation-ui-ktx:2.7.5")
     implementation("androidx.legacy:legacy-support-v4:1.0.0")
@@ -75,7 +76,8 @@ dependencies {
     implementation("org.tensorflow:tensorflow-lite-metadata:0.1.0")
     implementation("org.tensorflow:tensorflow-lite-gpu:2.3.0")
     testImplementation("junit:junit:4.13.2")
-    //ksp("androidx.room:room-compiler:2.6.0")
+    implementation("androidx.room:room-runtime:2.5.2")
+    ksp("androidx.room:room-compiler:2.5.2")
 
     //Tensorflow
 
